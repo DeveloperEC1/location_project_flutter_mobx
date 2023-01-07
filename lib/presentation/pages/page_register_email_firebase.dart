@@ -32,32 +32,36 @@ class _PageRegisterEmailFirebaseState extends State<PageRegisterEmailFirebase> {
       builder: (context) {
         return Scaffold(
           backgroundColor: Colors.blueGrey,
-          body: Form(
-            key: _mobX.formKeyGet,
-            child: Container(
-              child: Center(
-                child: SingleChildScrollView(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      _title(),
-                      UtilsApp.dividerHeight(context, 70),
-                      _textFieldsData(),
-                      UtilsApp.dividerHeight(context, 20),
-                      _buttonRegister(),
-                      UtilsApp.dividerHeight(context, 5),
-                      _showErrors(),
-                      _buttonToLogin(),
-                      UtilsApp.dividerHeight(context, 20),
-                      _loading(),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
+          body: _body(context),
         );
       },
+    );
+  }
+
+  Widget _body(BuildContext context) {
+    return Form(
+      key: _mobX.formKeyGet,
+      child: Container(
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                _title(),
+                UtilsApp.dividerHeight(context, 70),
+                _textFieldsData(),
+                UtilsApp.dividerHeight(context, 20),
+                _buttonRegister(),
+                UtilsApp.dividerHeight(context, 5),
+                _showErrors(),
+                _buttonToLogin(),
+                UtilsApp.dividerHeight(context, 20),
+                _loading(),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 

@@ -31,14 +31,18 @@ class _PageCustomMapListState extends State<PageCustomMapList> {
       builder: (context) {
         return Scaffold(
           appBar: WidgetAppBarTotal(),
-          body: Stack(
-            children: [
-              _googleMap(),
-              _blur(),
-            ],
-          ),
+          body: _body(),
         );
       },
+    );
+  }
+
+  Widget _body() {
+    return Stack(
+      children: [
+        _googleMap(),
+        _blur(),
+      ],
     );
   }
 

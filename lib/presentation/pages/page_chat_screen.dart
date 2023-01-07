@@ -46,16 +46,10 @@ class _PageChatScreenState extends State<PageChatScreen> {
       builder: (context) {
         return Scaffold(
           appBar: _appBar(),
-          body: Stack(
-            children: <Widget>[
-              _mainBody(),
-              _loading(),
-            ],
-          ),
+          body: _body(),
         );
       },
     );
-    ;
   }
 
   PreferredSizeWidget _appBar() {
@@ -87,6 +81,15 @@ class _PageChatScreenState extends State<PageChatScreen> {
         ),
         onPressed: () => Navigator.of(context).pop(),
       ),
+    );
+  }
+
+  Widget _body() {
+    return Stack(
+      children: <Widget>[
+        _mainBody(),
+        _loading(),
+      ],
     );
   }
 

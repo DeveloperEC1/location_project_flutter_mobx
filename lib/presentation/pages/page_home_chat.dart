@@ -30,7 +30,7 @@ class _PageHomeChatState extends State<PageHomeChat> {
       builder: (context) {
         return Scaffold(
           appBar: _appBar(),
-          body: _listViewData(),
+          body: _body(),
         );
       },
     );
@@ -57,7 +57,7 @@ class _PageHomeChatState extends State<PageHomeChat> {
     );
   }
 
-  Widget _listViewData() {
+  Widget _body() {
     return Container(
       child: Center(
         child: StreamBuilder(

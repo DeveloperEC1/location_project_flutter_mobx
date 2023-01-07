@@ -57,7 +57,7 @@ abstract class _MobXCustomMapList with Store {
           _newTaskModalBottomSheet(context, latLong),
         },
         icon:
-        BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueMagenta),
+            BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueMagenta),
       ),
     );
   }

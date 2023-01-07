@@ -34,22 +34,22 @@ class ShowerPages {
     if (kIsWeb) {
       Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => PageChatScreen(
-            peerId: peerId,
-            peerAvatar: peerAvatar,
-          )));
+                peerId: peerId,
+                peerAvatar: peerAvatar,
+              )));
     } else {
       if (Platform.isAndroid) {
         Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => PageChatScreen(
-              peerId: peerId,
-              peerAvatar: peerAvatar,
-            )));
+                  peerId: peerId,
+                  peerAvatar: peerAvatar,
+                )));
       } else {
         Navigator.of(context).push(CupertinoPageRoute(
             builder: (context) => PageChatScreen(
-              peerId: peerId,
-              peerAvatar: peerAvatar,
-            )));
+                  peerId: peerId,
+                  peerAvatar: peerAvatar,
+                )));
       }
     }
   }
@@ -133,16 +133,16 @@ class ShowerPages {
     if (kIsWeb) {
       Navigator.of(context).pushAndRemoveUntil(
           MaterialPageRoute(builder: (context) => PageListMap()),
-              (Route<dynamic> route) => false);
+          (Route<dynamic> route) => false);
     } else {
       if (Platform.isAndroid) {
         Navigator.of(context).pushAndRemoveUntil(
             MaterialPageRoute(builder: (context) => PageListMap()),
-                (Route<dynamic> route) => false);
+            (Route<dynamic> route) => false);
       } else {
         Navigator.of(context).pushAndRemoveUntil(
             CupertinoPageRoute(builder: (context) => PageListMap()),
-                (Route<dynamic> route) => false);
+            (Route<dynamic> route) => false);
       }
     }
   }
@@ -197,28 +197,28 @@ class ShowerPages {
     if (kIsWeb) {
       Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => PageMapList(
-            nameList: nameList,
-            vicinityList: vicinityList,
-            latList: latList,
-            lngList: lngList,
-          )));
+                nameList: nameList,
+                vicinityList: vicinityList,
+                latList: latList,
+                lngList: lngList,
+              )));
     } else {
       if (Platform.isAndroid) {
         Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => PageMapList(
-              nameList: nameList,
-              vicinityList: vicinityList,
-              latList: latList,
-              lngList: lngList,
-            )));
+                  nameList: nameList,
+                  vicinityList: vicinityList,
+                  latList: latList,
+                  lngList: lngList,
+                )));
       } else {
         Navigator.of(context).push(CupertinoPageRoute(
             builder: (context) => PageMapList(
-              nameList: nameList,
-              vicinityList: vicinityList,
-              latList: latList,
-              lngList: lngList,
-            )));
+                  nameList: nameList,
+                  vicinityList: vicinityList,
+                  latList: latList,
+                  lngList: lngList,
+                )));
       }
     }
   }
@@ -257,16 +257,16 @@ class ShowerPages {
     if (kIsWeb) {
       Navigator.of(context).pushAndRemoveUntil(
           MaterialPageRoute(builder: (context) => PageSignInFirebase()),
-              (Route<dynamic> route) => false);
+          (Route<dynamic> route) => false);
     } else {
       if (Platform.isAndroid) {
         Navigator.of(context).pushAndRemoveUntil(
             MaterialPageRoute(builder: (context) => PageSignInFirebase()),
-                (Route<dynamic> route) => false);
+            (Route<dynamic> route) => false);
       } else {
         Navigator.of(context).pushAndRemoveUntil(
             CupertinoPageRoute(builder: (context) => PageSignInFirebase()),
-                (Route<dynamic> route) => false);
+            (Route<dynamic> route) => false);
       }
     }
   }
@@ -276,22 +276,22 @@ class ShowerPages {
     if (kIsWeb) {
       Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => PageVideoCall(
-            channelName: channelName,
-            role: role,
-          )));
+                channelName: channelName,
+                role: role,
+              )));
     } else {
       if (Platform.isAndroid) {
         Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => PageVideoCall(
-              channelName: channelName,
-              role: role,
-            )));
+                  channelName: channelName,
+                  role: role,
+                )));
       } else {
         Navigator.of(context).push(CupertinoPageRoute(
             builder: (context) => PageVideoCall(
-              channelName: channelName,
-              role: role,
-            )));
+                  channelName: channelName,
+                  role: role,
+                )));
       }
     }
   }

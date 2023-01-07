@@ -112,8 +112,8 @@ abstract class _MobXPhoneSMSAuth with Store {
     final PhoneVerificationCompleted verificationCompleted =
         (AuthCredential phoneAuthCredential) async {
       UserCredential result =
-      await _auth.signInWithCredential(phoneAuthCredential).catchError(
-            (error) {
+          await _auth.signInWithCredential(phoneAuthCredential).catchError(
+        (error) {
           textError(error.message);
         },
       );

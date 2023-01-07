@@ -28,15 +28,19 @@ class _PageLiveChatState extends State<PageLiveChat> {
         return Scaffold(
           backgroundColor: Colors.blueGrey,
           appBar: WidgetAppBarTotal(),
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              _listViewData(),
-              _sendMessage(),
-            ],
-          ),
+          body: _body(),
         );
       },
+    );
+  }
+
+  Widget _body() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        _listViewData(),
+        _sendMessage(),
+      ],
     );
   }
 

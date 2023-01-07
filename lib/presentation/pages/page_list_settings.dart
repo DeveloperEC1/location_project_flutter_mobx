@@ -29,24 +29,28 @@ class _PageListSettingsState extends State<PageListSettings> {
         return Scaffold(
           backgroundColor: Colors.blueGrey,
           appBar: WidgetAppBarTotal(),
-          body: Container(
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  _openPlaces(),
-                  UtilsApp.dividerHeight(context, 20),
-                  _radiusSearch(),
-                  _radiusGeofence(),
-                  UtilsApp.dividerHeight(context, 100),
-                  _buttonSave(),
-                ],
-              ),
-            ),
-          ),
+          body: _body(context),
         );
       },
+    );
+  }
+
+  Widget _body(BuildContext context) {
+    return Container(
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            _openPlaces(),
+            UtilsApp.dividerHeight(context, 20),
+            _radiusSearch(),
+            _radiusGeofence(),
+            UtilsApp.dividerHeight(context, 100),
+            _buttonSave(),
+          ],
+        ),
+      ),
     );
   }
 

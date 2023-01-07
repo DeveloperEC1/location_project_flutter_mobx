@@ -34,14 +34,18 @@ class _PageLiveFavoritePlacesState extends State<PageLiveFavoritePlaces> {
       builder: (context) {
         return Scaffold(
           appBar: WidgetAppBarTotal(),
-          body: Stack(
-            children: [
-              _listViewData(),
-              _loading(),
-            ],
-          ),
+          body: _body(),
         );
       },
+    );
+  }
+
+  Widget _body() {
+    return Stack(
+      children: [
+        _listViewData(),
+        _loading(),
+      ],
     );
   }
 

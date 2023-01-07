@@ -48,46 +48,7 @@ class _PageListMapState extends State<PageListMap> {
       builder: (context) {
         return Scaffold(
           appBar: _appBar(),
-          body: NestedScrollView(
-            headerSliverBuilder:
-                (BuildContext context, bool innerBoxIsScrolled) {
-              return <Widget>[
-                SliverAppBar(
-                  expandedHeight:
-                      ResponsiveScreen().heightMediaQuery(context, 140),
-                  automaticallyImplyLeading: false,
-                  floating: true,
-                  pinned: true,
-                  backgroundColor: Colors.transparent,
-                  bottom: PreferredSize(
-                    preferredSize: Size.fromHeight(
-                        ResponsiveScreen().widthMediaQuery(context, 0)),
-                    child: Container(),
-                  ),
-                  flexibleSpace: FlexibleSpaceBar(
-                    background: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          _stories(),
-                          _dividerGrey(),
-                          _chipsType(),
-                          _dividerGrey(),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ];
-            },
-            body: Stack(
-              children: [
-                _mainBody(),
-                if (_mobX.isActiveNavGet) _loading(),
-                _blur(),
-              ],
-            ),
-          ),
+          body: _body(),
           drawer: WidgetDrawerTotal(),
         );
       },
@@ -180,6 +141,47 @@ class _PageListMapState extends State<PageListMap> {
         ],
       );
     }
+  }
+
+  Widget _body() {
+    return NestedScrollView(
+      headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+        return <Widget>[
+          SliverAppBar(
+            expandedHeight: ResponsiveScreen().heightMediaQuery(context, 140),
+            automaticallyImplyLeading: false,
+            floating: true,
+            pinned: true,
+            backgroundColor: Colors.transparent,
+            bottom: PreferredSize(
+              preferredSize: Size.fromHeight(
+                  ResponsiveScreen().widthMediaQuery(context, 0)),
+              child: Container(),
+            ),
+            flexibleSpace: FlexibleSpaceBar(
+              background: Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    _stories(),
+                    _dividerGrey(),
+                    _chipsType(),
+                    _dividerGrey(),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ];
+      },
+      body: Stack(
+        children: [
+          _mainBody(),
+          if (_mobX.isActiveNavGet) _loading(),
+          _blur(),
+        ],
+      ),
+    );
   }
 
   Widget _mainBody() {

@@ -30,9 +30,9 @@ class MapUtils {
                         leading: Image(
                           image: map.icon,
                           height:
-                          ResponsiveScreen().widthMediaQuery(context, 30),
+                              ResponsiveScreen().widthMediaQuery(context, 30),
                           width:
-                          ResponsiveScreen().widthMediaQuery(context, 30),
+                              ResponsiveScreen().widthMediaQuery(context, 30),
                         ),
                       ),
                   ],

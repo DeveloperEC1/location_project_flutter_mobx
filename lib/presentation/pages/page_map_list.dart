@@ -46,17 +46,21 @@ class _PageMapListState extends State<PageMapList> {
       builder: (context) {
         return Scaffold(
           appBar: WidgetAppBarTotal(),
-          body: Stack(
-            children: [
-              _googleMap(_mobX.currentLocationGet),
-              if (_mobX.isSearchingGet) _loading(),
-            ],
-          ),
+          body: _body(),
           floatingActionButton: _floatingActionButton(),
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerFloat,
         );
       },
+    );
+  }
+
+  Widget _body() {
+    return Stack(
+      children: [
+        _googleMap(_mobX.currentLocationGet),
+        if (_mobX.isSearchingGet) _loading(),
+      ],
     );
   }
 
