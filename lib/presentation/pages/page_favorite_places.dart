@@ -107,22 +107,6 @@ class _PageFavoritePlacesState extends State<PageFavoritePlaces> {
     );
   }
 
-  Widget _loading() {
-    return _provider.isCheckingBottomSheetGet == true
-        ? Positioned.fill(
-            child: BackdropFilter(
-              filter: ImageFilter.blur(
-                sigmaX: ResponsiveScreen().widthMediaQuery(context, 5),
-                sigmaY: ResponsiveScreen().widthMediaQuery(context, 5),
-              ),
-              child: Container(
-                color: Colors.black.withOpacity(0),
-              ),
-            ),
-          )
-        : Container();
-  }
-
   Widget _buildAnimatedItem(
     BuildContext context,
     int index,
@@ -292,5 +276,21 @@ class _PageFavoritePlacesState extends State<PageFavoritePlaces> {
         color: Color(color),
       ),
     );
+  }
+
+  Widget _loading() {
+    return _provider.isCheckingBottomSheetGet == true
+        ? Positioned.fill(
+            child: BackdropFilter(
+              filter: ImageFilter.blur(
+                sigmaX: ResponsiveScreen().widthMediaQuery(context, 5),
+                sigmaY: ResponsiveScreen().widthMediaQuery(context, 5),
+              ),
+              child: Container(
+                color: Colors.black.withOpacity(0),
+              ),
+            ),
+          )
+        : Container();
   }
 }
