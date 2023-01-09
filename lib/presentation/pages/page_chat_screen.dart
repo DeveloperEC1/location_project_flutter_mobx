@@ -463,7 +463,7 @@ class _PageChatScreenState extends State<PageChatScreen> {
           Row(
             children: <Widget>[
               _mobX.isLastMessageLeft(index)
-                  ? _gotMessageItemProfileImage()
+                  ? _gotMessageItemProfilePicture()
                   : Container(
                       width: ResponsiveScreen().widthMediaQuery(context, 35)),
               document.data()['type'] == 0
@@ -492,7 +492,7 @@ class _PageChatScreenState extends State<PageChatScreen> {
     );
   }
 
-  Widget _gotMessageItemProfileImage() {
+  Widget _gotMessageItemProfilePicture() {
     return Material(
       child: CachedNetworkImage(
         placeholder: (context, url) => Container(
